@@ -1,0 +1,28 @@
+{
+  "schema_version": "codeasworld-robocasa-catalog-1",
+  "source": {
+    "name": "RoboCasa kitchen assets",
+    "materialization": "HF CPU Job only; selected source assets are converted or staged as GLTF below this catalog root",
+    "license_review": "required before artifact publication"
+  },
+  "assets": [
+    {"id": "robocasa:bowl-v0", "label": "graspable serving bowl", "category": "bowl", "keywords": ["miso", "dish", "ceramic"], "relative_path": "selected/bowl-v0.glb", "source_path": "objects/aigen_objs/bowl/bowl_1/visual/model_normalized_0.obj"},
+    {"id": "robocasa:mug-v0", "label": "ceramic coffee mug", "category": "mug", "keywords": ["cup", "handle", "coffee"], "relative_path": "selected/mug-v0.glb", "source_path": "objects/aigen_objs/mug/mug_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:cup-v0", "label": "kitchen cup", "category": "cup", "keywords": ["mug", "drink", "ceramic"], "relative_path": "selected/cup-v0.glb", "source_path": "objects/aigen_objs/cup/cup_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:plate-v0", "label": "round dinner plate", "category": "plate", "keywords": ["dish", "flat", "ceramic"], "relative_path": "selected/plate-v0.glb", "source_path": "objects/aigen_objs/plate/plate_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:can-v0", "label": "food can", "category": "can", "keywords": ["tin", "container", "cylindrical"], "relative_path": "selected/can-v0.glb", "source_path": "objects/aigen_objs/can/can_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:pan-v0", "label": "cooking pan", "category": "pan", "keywords": ["pot", "handle", "cookware"], "relative_path": "selected/pan-v0.glb", "source_path": "objects/aigen_objs/pan/pan_2/visual/model_normalized_0.obj"},
+    {"id": "robocasa:pot-v0", "label": "cooking pot", "category": "pot", "keywords": ["pan", "handle", "cookware"], "relative_path": "selected/pot-v0.glb", "source_path": "objects/aigen_objs/pot/pot_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:sponge-v0", "label": "cleaning sponge", "category": "sponge", "keywords": ["clean", "foam", "kitchen"], "relative_path": "selected/sponge-v0.glb", "source_path": "objects/aigen_objs/sponge/sponge_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:soap-dispenser-v0", "label": "soap dispenser", "category": "soap dispenser", "keywords": ["bottle", "pump", "cleaning"], "relative_path": "selected/soap-dispenser-v0.glb", "source_path": "objects/aigen_objs/soap_dispenser/soap_dispenser_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:apple-v0", "label": "red apple", "category": "fruit", "keywords": ["apple", "produce", "food"], "relative_path": "selected/apple-v0.glb", "source_path": "objects/aigen_objs/apple/apple_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:banana-v0", "label": "ripe banana", "category": "fruit", "keywords": ["banana", "produce", "food"], "relative_path": "selected/banana-v0.glb", "source_path": "objects/aigen_objs/banana/banana_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:bread-v0", "label": "bread loaf", "category": "bread", "keywords": ["loaf", "food", "baked"], "relative_path": "selected/bread-v0.glb", "source_path": "objects/aigen_objs/bread/bread_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:cutting-board-v0", "label": "wooden cutting board", "category": "cutting board", "keywords": ["chop", "prep", "wood"], "relative_path": "selected/cutting-board-v0.glb", "source_path": "objects/aigen_objs/cutting_board/cutting_board_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:fork-v0", "label": "dinner fork", "category": "fork", "keywords": ["utensil", "cutlery", "table setting"], "relative_path": "selected/fork-v0.glb", "source_path": "objects/aigen_objs/fork/fork_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:knife-v0", "label": "kitchen knife", "category": "knife", "keywords": ["utensil", "cutlery", "prep"], "relative_path": "selected/knife-v0.glb", "source_path": "objects/aigen_objs/knife/knife_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:spoon-v0", "label": "dinner spoon", "category": "spoon", "keywords": ["utensil", "cutlery", "table setting"], "relative_path": "selected/spoon-v0.glb", "source_path": "objects/aigen_objs/spoon/spoon_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:spatula-v0", "label": "cooking spatula", "category": "spatula", "keywords": ["utensil", "turner", "cookware"], "relative_path": "selected/spatula-v0.glb", "source_path": "objects/aigen_objs/spatula/spatula_0/visual/model_normalized_0.obj"},
+    {"id": "robocasa:tray-v0", "label": "serving tray", "category": "tray", "keywords": ["serve", "plate", "container"], "relative_path": "selected/tray-v0.glb", "source_path": "objects/aigen_objs/tray/tray_0/visual/model_normalized_0.obj"}
+  ]
+}

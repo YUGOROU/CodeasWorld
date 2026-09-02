@@ -1,0 +1,137 @@
+# CaW keeps dsh-base's model, session, attachment, persistence, and default
+# agent-loop services while removing unrelated model-visible capabilities.
+- id: hmr
+  disabled: true
+
+- id: agent-instructions
+  disabled: true
+
+- id: skill
+  disabled: true
+
+- id: skill-filesystem
+  disabled: true
+
+- id: skill-badge
+  disabled: true
+
+- id: tool-skill
+  disabled: true
+
+- id: commands
+  disabled: true
+
+- id: command-feedback
+  disabled: true
+
+- id: session-title-llm
+  disabled: true
+
+- id: goal
+  disabled: true
+
+- id: goal-round-driver
+  disabled: true
+
+- id: command-goal
+  disabled: true
+
+- id: plan-mode
+  disabled: true
+
+- id: command-compact
+  disabled: true
+
+- id: subagent
+  disabled: true
+
+- id: subagent-spawn-in-process
+  disabled: true
+
+- id: subagent-fork-in-process
+  disabled: true
+
+- id: tool-subagent-control
+  disabled: true
+
+- id: tool-subagent-list-agents
+  disabled: true
+
+- id: tool-subagent
+  disabled: true
+
+- id: tool-subagent-fork
+  disabled: true
+
+- id: tool-subagent-report
+  disabled: true
+
+- id: workflow-worker-thread
+  disabled: true
+
+- id: tool-workflow
+  disabled: true
+
+- id: tool-todo
+  disabled: true
+
+- id: tool-goal
+  disabled: true
+
+- id: tool-ralph
+  disabled: true
+
+- id: tool-str-replace-editor
+  disabled: true
+
+- id: tool-bash
+  disabled: true
+
+- id: tool-pwsh
+  disabled: true
+
+- id: tool-jobs
+  disabled: true
+
+- id: tool-fs
+  disabled: true
+
+- id: tool-fs-search
+  disabled: true
+
+- id: tool-web
+  disabled: true
+
+- id: system-prompt
+  config:
+    persona: |
+      You are the Code as World scene agent. Reconstruct the user's image and instruction as a Blender scene.
+
+      The current scene.py starts as:
+
+      import bpy
+
+      # CaW editable scene
+
+      Use patch_and_render for every scene change. Each old string must match the current scene.py exactly once. Inspect the returned scene, render, status, and error before the next change. Call finish when the scene is ready. Do not emit hidden reasoning or ask for unrelated tools.
+
+- insert:
+    - id: caw-tools
+      name: codeasworld-dsh
+      config:
+        episodesRoot: './.caw/episodes'
+        blenderExecutable: '/Applications/Blender.app/Contents/MacOS/Blender'
+        blenderTimeoutMs: 60000
+        observationPath: !!js ctx.cawStartup.imagePath
+        evaluatorExecutable: './evaluator/.venv/bin/caw-gap-evaluator'
+        evaluatorTimeoutMs: 300000
+
+    - id: caw-startup
+      name: codeasworld-dsh/startup
+
+    - id: caw-runner
+      name: codeasworld-dsh/runner
+      inject: [cawStartup]
+      config:
+        imagePath: !!js ctx.cawStartup.imagePath
+        instruction: !!js ctx.cawStartup.instruction

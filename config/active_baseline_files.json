@@ -1,0 +1,24 @@
+{
+  "schema_version": "codeasworld-active-baseline-inputs-v1",
+  "active_paths": [
+    "caw/package.json",
+    "caw/package-lock.json",
+    "caw/cordis.three.patch.yml",
+    "caw/three_runtime.js",
+    "caw/three_index.js",
+    "caw/three_views.js",
+    "caw/assets.js",
+    "caw/assets/robocasa_manifest.json",
+    "caw/protocols",
+    "caw/three",
+    "src/codeasworld/scene_projection.py",
+    "src/codeasworld/observation_contract.py",
+    "src/codeasworld/pairwise_evaluator.py",
+    "scripts/run_vertical_slice.py",
+    "scripts/lint_observation_bundle.py",
+    "scripts/evaluate_pairwise_sanity.py",
+    "scripts/run_active_preflight.py",
+    "pyproject.toml",
+    "uv.lock"
+  ]
+}

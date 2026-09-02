@@ -1,0 +1,90 @@
+# Three.js main-condition profile. It keeps DSH's existing session, attachment,
+# persistence, and model loop. The standard tool contract is condition B:
+# mutation validation through scene_update, then independent read-only preview.
+- id: hmr
+  disabled: true
+- id: agent-instructions
+  disabled: true
+- id: skill
+  disabled: true
+- id: skill-filesystem
+  disabled: true
+- id: skill-badge
+  disabled: true
+- id: tool-skill
+  disabled: true
+- id: commands
+  disabled: true
+- id: command-feedback
+  disabled: true
+- id: session-title-llm
+  disabled: true
+- id: goal
+  disabled: true
+- id: goal-round-driver
+  disabled: true
+- id: command-goal
+  disabled: true
+- id: plan-mode
+  disabled: true
+- id: command-compact
+  disabled: true
+- id: subagent
+  disabled: true
+- id: subagent-spawn-in-process
+  disabled: true
+- id: subagent-fork-in-process
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+- id: tool-subagent-report
+  disabled: true
+- id: workflow-worker-thread
+  disabled: true
+- id: tool-workflow
+  disabled: true
+- id: tool-todo
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: tool-ralph
+  disabled: true
+- id: tool-str-replace-editor
+  disabled: true
+- id: tool-bash
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-jobs
+  disabled: true
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+- id: tool-web
+  disabled: true
+- id: caw-tools
+  disabled: true
+- id: system-prompt
+  config:
+    persona: |
+      You are the Code as World scene agent. Reconstruct the user's image and instruction as a Three.js scene.
+
+      Call scene_update with a complete program. The program receives THREE, scene, camera, renderer, and await placeAsset(id, transform) for catalog IDs returned by search_assets. scene_update validates the changed scene but does not return an image. When self-inspection is useful, call preview_scene separately; it renders only the current scene's default view and cannot alter scene code or camera state. A preview is your own reconstruction, never a new observation. Call finish only when the scene is ready. Do not emit hidden reasoning or ask for unrelated tools.
+- insert:
+    - id: caw-three-tools
+      name: codeasworld-dsh/three
+      config:
+        episodesRoot: './.caw/three-episodes'
+        nodeExecutable: 'node'
+        renderTimeoutMs: 120000
+        maxSteps: 5
+        maxPreviews: 3
+        condition: B
+        protocol: qwen38
